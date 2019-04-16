@@ -1,0 +1,96 @@
+﻿
+@{
+    ViewBag.Title = "Show";
+    Layout = "~/Areas/Author/Views/Shared/AuthorLayoutPage.cshtml";
+}
+
+<h2>Show</h2>
+
+
+@model BlogProject.UI.Areas.Author.Models.VM.ArticleCommentVM
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <h3>@Model.Article.Header</h3>
+                <figure>
+                    <p class="text-primary" style="text-align:right">
+                        <a href="/AppUser/Show/@Model.Article.AppUserID">
+                            Yazar:
+                            @Model.Article.AppUser.UserName
+                        </a>
+                    </p>
+                    <hr />
+                    <label id="showLikes" style="text-align:right" class="alert alert-success">
+                        @Model.Likes
+                    </label>
+                    <button id="like" type="submit" style="text-align:right" href="javascript:void(0)" class="btn btn-primary">Bu Makaleyi Beğen!</button>
+                    <hr />
+                    <label id="message" style="display:none" class="alert alert-danger"></label>
+
+                </figure>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <form action="/Article/AddComment" method="post">
+                    <div class="form-control">
+                        <label for="Header">Başlık</label>
+                        <input type="text" name="Header" class="form-control" placeholder="Başlık" />
+
+                    </div>
+                    <div class="form-control">
+                        <label for="Content">İçerik</label>
+                        <input type="text" name="Content" placeholder="Lütfen Yorumunuzu yazınız.." />
+
+                    </div>
+                    <input type="hidden" name="ID" value="@Model.Article.ID" />
+                    <input type="submit" name="name" value="Ekle" class="form-control btn btn-primary" />
+
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                @foreach (var item in Model.Comments)
+                {
+                    <p class="text-primary">@item.Header</p>
+                    <figure>
+                        @item.Content
+                    </figure>
+                    <p class="text-primary" style="text-align:right">
+                        @item.AppUser.UserName &nbsp;
+                        <i>@item.AddDate</i>
+
+                    </p>
+                    <hr />
+                }
+
+            </div>
+        </div>
+    </div>
+</article>
+
+<script>
+    $("#like").click.(function () {
+        var id = "@Model.Article.ID"
+
+        $ajax({
+            Type: "POST",
+            dataType: "Json",
+            url: "@Url.Action("Addlike","Article")/" + id,
+            success: function (data) {
+                if (data.isSuccess == false) {
+                    $("#message").removeAttr("style");
+
+                }
+                $("#message").text(data.userMessage);
+                $("#showLikes").text(data.Likes);
+
+                setTimeout(function () {
+                    $("#message").slideUp(1000);
+                },2000)
+            }
+        })
+    })
+</script>

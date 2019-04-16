@@ -1,0 +1,15 @@
+C:\Users\LB ASUS\source\repos\BlogProject\BlogProject.BLL\obj\Debug\BlogProject.BLL.csprojAssemblyReference.cache
+C:\Users\LB ASUS\source\repos\BlogProject\BlogProject.BLL\obj\Debug\BlogProject.BLL.csproj.CoreCompileInputs.cache
+C:\Users\LB ASUS\source\repos\BlogProject\BlogProject.BLL\bin\Debug\BlogProject.BLL.dll.config
+C:\Users\LB ASUS\source\repos\BlogProject\BlogProject.BLL\bin\Debug\BlogProject.BLL.dll
+C:\Users\LB ASUS\source\repos\BlogProject\BlogProject.BLL\bin\Debug\BlogProject.BLL.pdb
+C:\Users\LB ASUS\source\repos\BlogProject\BlogProject.BLL\bin\Debug\BlogProject.DAL.dll
+C:\Users\LB ASUS\source\repos\BlogProject\BlogProject.BLL\bin\Debug\EntityFramework.dll
+C:\Users\LB ASUS\source\repos\BlogProject\BlogProject.BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\LB ASUS\source\repos\BlogProject\BlogProject.BLL\bin\Debug\BlogProject.DAL.pdb
+C:\Users\LB ASUS\source\repos\BlogProject\BlogProject.BLL\bin\Debug\BlogProject.DAL.dll.config
+C:\Users\LB ASUS\source\repos\BlogProject\BlogProject.BLL\bin\Debug\EntityFramework.xml
+C:\Users\LB ASUS\source\repos\BlogProject\BlogProject.BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\LB ASUS\source\repos\BlogProject\BlogProject.BLL\obj\Debug\BlogProject.BLL.csproj.CopyComplete
+C:\Users\LB ASUS\source\repos\BlogProject\BlogProject.BLL\obj\Debug\BlogProject.BLL.dll
+C:\Users\LB ASUS\source\repos\BlogProject\BlogProject.BLL\obj\Debug\BlogProject.BLL.pdb
